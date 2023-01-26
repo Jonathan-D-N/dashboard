@@ -1,1 +1,89 @@
+:root {
+    --main-blue: rgb(25, 146, 212);
+    --main-white: rgb(255, 255, 255);
+    --main-gray: rgb(226, 232, 240);
+    --gray-shadow: rgb(160, 160, 160);
+}
 
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+.container {
+    width: 100vw;
+    height: 100%;
+    min-height: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 8fr;
+}
+
+.sidebar {
+    grid-row: 1/4;
+    background-color: var(--main-blue);
+}
+
+.navbar {
+    grid-row: 1/2;
+}
+
+.mainContent {
+    grid-row: 2/4;
+    padding-left: 15px;
+    background-color: var(--main-gray);
+    box-shadow: inset 1px 1px 3px var(--gray-shadow);
+    display: grid;
+    gap: 15px;
+    /* grid-template-columns: repeat(auto-fit, minmax(255px, 450px));
+    grid-template-rows: minmax(50px, 100px) minmax(3fr 4fr); */
+}
+
+.yourProjects {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.announcements {
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+h2 {
+    margin-block-end: 0;
+    margin-block-start: 0;
+}
+
+/* .cardsContainer {
+    grid-area: auto;
+    /* display: grid; */
+    /* gap: 15px; */
+    /* grid-template-columns: repeat(auto-fill, minmax(250px, 450px)); */
+    /* grid-template-rows: repeat(auto-fill, minmax(125px, 250px));
+} */
+
+.card {
+    text-align: center;
+    border-radius: 10px;
+    background-color: var(--main-white);
+    border-left: 7px solid orange;
+    box-shadow: 3px 3px 3px var(--gray-shadow);
+}
+
+.rightSidebar {
+    grid-column: 3 / 4;
+    grid-row: 2 / 5;
+    /* display: grid;
+    grid-template-rows: minmax(250px, 400px) 1fr minmax(250px, 400px); */
+}
+
+.rightCard {
+    text-align: center;
+    border-radius: 10px;
+    background-color: var(--main-white);
+    box-shadow: 3px 3px 3px var(--gray-shadow);
+}
