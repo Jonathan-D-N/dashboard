@@ -40,12 +40,13 @@ h4 {
 
 .mainContent {
     grid-row: 2/4;
-    padding: 1rem 1rem 3rem 1rem;
+    padding: 1rem 1rem 2rem 1rem;
     background-color: var(--main-gray);
     box-shadow: inset 1px 1px 3px var(--gray-shadow);
     display: grid;
     gap: 2rem;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: auto minmax(200px, 400px);
+    max-height: 100%;
 }
 
 .mainContent .projects {
@@ -95,6 +96,7 @@ h4 {
 
 .trending > h4 {
     margin-top: 1rem;
+    margin-bottom: 0.3rem;
 }
 
 .trending > div {
@@ -124,6 +126,7 @@ h4 {
     word-wrap: break-word;
     overflow-wrap: break-word;
     hyphens: auto; 
+    color: gray;
     flex: 3;
 }
 
@@ -137,8 +140,100 @@ h4 {
 }
 
 .rightCard {
-    text-align: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
     border-radius: 10px;
     background-color: var(--main-white);
     box-shadow: 3px 3px 3px var(--gray-shadow);
+    display: flex;
+    flex-direction: column;
+}
+
+.right1 > h5 {
+    font-size: 0.8rem;
+    margin-bottom: 0;
+    margin-top: 0.7rem;
+    flex: 1;
+}
+
+.right1 > p {
+    margin-right: 2rem;
+    font-size: 0.7rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto; 
+    color: gray;
+    flex: 3;
+}
+
+.line {
+    background-color: lightgray;
+    height: 1px;
+    width: 100%;
+}
+
+.right2 {
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.right2 > div {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+}
+
+.textWrapper {
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.textWrapper > p {
+    font-size: 13px;
+    margin-top: 0;
+    margin-bottom: 0.1rem;
+}
+
+.userName {
+    font-weight: 600;
+}
+
+.userDescription {
+    color: gray;
+}
+
+.skyblue {
+    align-self: center;
+    background-color: skyblue;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+}
+
+.orange {
+    align-self: center;
+    background-color: orange;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+}
+
+.gray {
+    align-self: center;
+    background-color: gray;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+}
+
+.pink {
+    align-self: center;
+    background-color: pink;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
 }
