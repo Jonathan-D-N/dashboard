@@ -9,6 +9,7 @@ body, html {
     height: 100%;
     width: 100%;
     margin: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 .container {
@@ -79,6 +80,10 @@ h4 {
     flex-direction: column;
 }
 
+.announcements > h4 {
+    margin-bottom: 2rem;
+}
+
 .announcements > div {
     flex: 1;
 }
@@ -88,16 +93,47 @@ h4 {
     flex-direction: column;
 }
 
+.trending > h4 {
+    margin-top: 1rem;
+}
+
 .trending > div {
     flex: 1;
 }
 
 .card {
-    text-align: center;
     border-radius: 10px;
     background-color: var(--main-white);
     border-left: 7px solid orange;
     box-shadow: 3px 3px 3px var(--gray-shadow);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.card > h5 {
+    font-size: 1rem;
+    margin-bottom: 0;
+    flex: 1;
+}
+
+.card > p {
+    margin-right: 2rem;
+    font-size: 0.8rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto; 
+    flex: 3;
+}
+
+.card > div {
+    margin-right: 1rem;
+    min-width: 5rem;
+    align-self: end;
+    display: flex;
+    justify-content: space-between;
+    flex: 2;
 }
 
 .rightCard {
