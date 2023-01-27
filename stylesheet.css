@@ -35,18 +35,16 @@ body, html {
 .navbar {
     grid-row: 1/2;
     max-width: 1266px;
-    display: flex;
-    flex-direction: column;
+    display: grid;
 }
 
 .navRow1 {
     margin-left: 2rem;
-    margin-top: 1rem;
-    display: flex;
+    display: grid;
+    grid-template-columns: minmax(200px, 800px) 300px;
 }
 
 .navRow1 .flexLeft {
-    flex: 2;
     display: flex;
     align-items: center;
 }
@@ -56,15 +54,13 @@ body, html {
     border: none;
     border-radius: 1.25rem;
     cursor: text;
-    width: 30vw;
+    width: 30rem;
     font-size: 0.8rem;
     height: 1.5rem;
     margin: 0 0 0 1rem;  
 }
 
 .navRow1 .flexRight {
-    margin-right: 5rem;
-    flex: 0.5;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -84,11 +80,12 @@ body, html {
 
 .navRow2 {
     margin-left: 2rem;
-    display: flex;
+    margin-bottom: 1rem;
+    display: grid;
+    grid-template-columns: minmax(200px, 800px) 300px;
 }
 
 .navRow2 .flexLeft {
-    flex: 1.5;
     display: flex;
     align-items: center;
 }
@@ -116,10 +113,19 @@ body, html {
 }
 
 .navRow2 .flexRight {
-    flex: 0.75;
     display: flex;
-    justify-content: space-around;
     align-items: center;
+}
+
+button {
+    border-radius: 20px;
+    border: none;
+    color: white;
+    background-color: var(--main-blue);
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.6rem 1.2rem 0.6rem 1.2rem;
+    margin: 0 1rem 0 1rem;
 }
 
 h4 {
@@ -139,6 +145,15 @@ CONTENT (CARDS)
     max-height: 100%;
     overflow: auto;
     scrollbar-width: none;
+}
+
+.titles {
+    max-width: 1043px;
+    margin-right: 9.8rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+
 }
 
 .contentWrapper {
@@ -162,17 +177,6 @@ Main 6 cards
 .projectsGrid > h4 {
     grid-column: 1/3;
 }
-
-.titles {
-    max-width: 1043px;
-    margin-right: 10rem;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-    display: flex;
-    justify-content: space-between;
-
-}
-
 .card {
     border-radius:7px;
     background-color: var(--main-white);
