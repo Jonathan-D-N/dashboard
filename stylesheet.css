@@ -21,7 +21,8 @@ body, html {
     overflow-y: hidden;
     display: grid;
     /* grid-template-columns: 1fr 4fr; */
-    grid-template-columns: minmax(auto, auto) minmax(auto, auto);
+    /* grid-template-columns: minmax(400px, 850px) minmax(200px, 400px); */
+    grid-template-columns: minmax(auto, 250px) minmax(auto, auto);
     /* grid-template-rows: 1fr 8fr; */
     grid-template-rows: minmax(auto, auto) minmax(auto, auto);
 }
@@ -33,21 +34,20 @@ body, html {
 
 .navbar {
     grid-row: 1/2;
+    max-width: 1266px;
     display: flex;
     flex-direction: column;
 }
 
 .navRow1 {
     margin-left: 2rem;
-    margin-right: 5rem;
     margin-top: 1rem;
     display: flex;
 }
 
-.flexLeft {
+.navRow1 .flexLeft {
     flex: 2;
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
@@ -56,14 +56,15 @@ body, html {
     border: none;
     border-radius: 1.25rem;
     cursor: text;
-    flex: 1;
+    width: 30vw;
     font-size: 0.8rem;
     height: 1.5rem;
-    margin: 0 6rem 0 1rem;  
+    margin: 0 0 0 1rem;  
 }
 
-.flexRight {
-    flex: 0.7;
+.navRow1 .flexRight {
+    margin-right: 5rem;
+    flex: 0.5;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -81,6 +82,46 @@ body, html {
     width: 2.5rem;
 }
 
+.navRow2 {
+    margin-left: 2rem;
+    display: flex;
+}
+
+.navRow2 .flexLeft {
+    flex: 1.5;
+    display: flex;
+    align-items: center;
+}
+
+.navRow2 .flexLeft .orange {
+    height: 3.5rem;
+    width: 3.5rem;
+}
+
+.navRow2 .flexLeft .heroText {
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.heroText > p {
+    margin: 0 0 0.4rem 0;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+.heroText > h4 {
+    font-size: 1.2rem;
+}
+
+.navRow2 .flexRight {
+    flex: 0.75;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
 h4 {
     font-size: 1.4rem;
     margin: 0;
@@ -94,10 +135,15 @@ CONTENT (CARDS)
     background-color: var(--main-gray);
     box-shadow: inset 1px 1px 3px var(--gray-shadow);
     display: grid;
-    grid-template-columns: minmax(400px, 850px) minmax(200px, 400px);
+    grid-template-rows: auto auto;
     max-height: 100%;
     overflow: auto;
     scrollbar-width: none;
+}
+
+.contentWrapper {
+    display: grid;
+    grid-template-columns: minmax(400px, 850px) minmax(200px, 350px);
 }
 
 .content::-webkit-scrollbar {
@@ -109,12 +155,22 @@ Main 6 cards
 .projectsGrid {
     display: grid;
     grid-template-columns:  minmax(200px, 400px) minmax(200px, 400px);
-    grid-template-rows: auto 1fr 1fr 1fr;
+    grid-template-rows: minmax(175px, auto) minmax(175px, auto) minmax(175px, auto);
     gap: 2rem;
 }
 
 .projectsGrid > h4 {
     grid-column: 1/3;
+}
+
+.titles {
+    max-width: 1043px;
+    margin-right: 10rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+
 }
 
 .card {
@@ -162,7 +218,7 @@ RIGHT SIDE CARDS
     grid-column: 2 / 3;
     margin-right: 1rem;
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto auto;
 }
 
 .announcements > h4 {
