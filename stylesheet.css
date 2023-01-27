@@ -117,8 +117,8 @@ RIGHT SIDE CARDS
     grid-template-rows: 1fr 1fr;
 }
 
-.announcementsGrid > h4 {
-    margin: 0;
+.announcements > h4 {
+    margin: 0 0 2rem 0;
 }
 
 .announcementsGrid > div {
@@ -126,14 +126,22 @@ RIGHT SIDE CARDS
     flex-direction: column;
 }
 
-.announcementsGrid > div > h4 {
-    margin-bottom: 2rem;
-}
-
 .announcementsGrid > div > div {
     flex: 1;
 }
 
+.cardRight {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-radius: 10px;
+    background-color: var(--main-white);
+    box-shadow: 3px 3px 3px var(--gray-shadow);
+    display: flex;
+    flex-direction: column;
+}
+/******
+Right top card
+******/
 .right1 > h5 {
     font-size: 0.8rem;
     margin-bottom: 0;
@@ -151,25 +159,17 @@ RIGHT SIDE CARDS
     flex: 3;
 }
 
-.cardRight {
-    padding-left: 2rem;
-    padding-right: 2rem;
-    border-radius: 10px;
-    background-color: var(--main-white);
-    box-shadow: 3px 3px 3px var(--gray-shadow);
-    display: flex;
-    flex-direction: column;
-}
-
-.trending > h4 {
-    margin-top: 1rem;
-    margin-bottom: 0 !important;
-}
-
 .line {
     height: 1px;
     width: 100%;
     background-color: rgb(255, 166, 0, 0.25);
+}
+/******
+Right bottom card
+******/
+.trending > h4 {
+    margin-top: 1rem;
+    margin-bottom: 0 !important;
 }
 
 .right2 {
@@ -186,14 +186,14 @@ RIGHT SIDE CARDS
     flex-wrap: wrap;
 }
 
-.textWrapper {
+.userInfoWrapper {
     margin-left: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.textWrapper > p {
+.userInfoWrapper > p {
     font-size: 13px;
     margin-top: 0;
     margin-bottom: 0.1rem;
@@ -206,7 +206,9 @@ RIGHT SIDE CARDS
 .userDescription {
     color: gray;
 }
-
+/***
+Colored profile picture circles
+***/
 .skyblue {
     align-self: center;
     background-color: skyblue;
