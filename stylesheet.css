@@ -28,22 +28,27 @@ body, html {
 SIDEBAR
 **********/
 aside {
+    transition: all 1s;
+    max-width: 400px;
     grid-row: 1/4;
     background-color: var(--main-blue);
     padding-left: 1rem;
 }
 
 .logo {
+    transition: all 0.9;
     color: var(--main-white);
     display: flex;
     align-items: center;
 }
 
 .logo > svg {
+    transition: all 0.9;
     fill: var(--main-white);
 }
 
 nav > a {
+    transition: all 0.9;
     text-decoration: none;
     color: var(--main-white);
     font-weight: 600;
@@ -382,17 +387,21 @@ Colored profile picture circles
 /***********************
 MEDIA QUERIES
 ***********************/
-@media (min-width: 901px) {
+@media (min-width: 912px) {
     .mediaYourProjects, .mediaAnnouncements {
         opacity: 0;
         position: absolute;
     }
 }
 
-@media (max-width: 901px) {
+@media (max-width: 912px) {
     /******
     Main content section
     ******/
+    .content {
+        
+    }
+
     .titles {
         opacity: 0;
     }
@@ -429,4 +438,29 @@ MEDIA QUERIES
     /*******
     Aside section
     *******/
+
+    aside {
+        padding-left: 0;
+        transition: all 1s;
+        max-width: 50px;
+    }
+    .logo {
+        margin-left: 7px;
+    }
+
+    aside h2 {
+        transition: all 0.9s;
+        opacity: 0;
+    }
+
+    aside span {
+        transition: all 0.9;
+        opacity: 0;
+    }
+
+    aside svg {
+        transition: all 0.9s;
+        scale: 160%;
+        position: absolute;
+    }
 }
