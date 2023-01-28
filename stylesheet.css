@@ -86,6 +86,10 @@ TOP NAVBAR
     align-items: center;
 }
 
+.flexLeft .mediaBell {
+    opacity: 0;
+}
+
 #search-box {
     background-color: var(--main-gray);
     border: none;
@@ -398,8 +402,8 @@ MEDIA QUERIES
     /******
     Main content section
     ******/
-    .content {
-        
+    .container {
+        grid-template-columns: minmax(50px, auto) minmax(200px, auto);
     }
 
     .titles {
@@ -415,14 +419,22 @@ MEDIA QUERIES
     }
 
     .contentWrapper {
-        scale: 105%;
-        grid-template-columns: minmax(200px, 400px);
+        grid-template-columns: minmax(300px, 600px);
         margin: auto;
     }
 
     .projectsGrid {
         grid-column: 1/2;
-        grid-template-columns: minmax(200px, 400px);
+        margin: auto;
+    }
+
+    .card > p {
+        margin-bottom: 0;
+    }
+
+    .card > div {
+        margin-bottom: 1rem;
+        flex: 1;
     }
 
     .announcementsGrid {
@@ -436,7 +448,7 @@ MEDIA QUERIES
     }
 
     /*******
-    Aside section
+    Aside section (Media query)
     *******/
 
     aside {
@@ -462,5 +474,82 @@ MEDIA QUERIES
         transition: all 0.9s;
         scale: 160%;
         position: absolute;
+    }
+}
+
+@media (max-width: 650px) {
+    .container {
+        grid-template-columns: auto auto;
+    }
+
+    .navbar {
+        grid-template-columns: min-content;
+        grid-template-rows: auto;
+    }
+/*
+navrow1
+*/
+
+    .navbar {
+        margin: auto;
+    }
+    .navRow1 {
+        grid-row: 2/3;
+        display: flex;
+        margin: 0;
+    }
+
+    .navRow1 .flexLeft {
+        flex: 1;
+        justify-content: space-around;
+        margin: 0;
+    }
+
+    .flexLeft .mediaBell {
+        opacity: 100;
+    }
+
+    .flexLeft > input {
+        max-width: 50vw;
+    }
+
+    .navRow1 .flexRight {
+        opacity: 0;
+        max-width: 0;
+    }
+
+    .navRow1 .flexRight > div {
+        opacity: 0;
+        max-width: 0;
+    }
+    .navRow1 .flexRight > h5 {
+        opacity: 0;
+    }
+
+    .navRow2 {
+        grid-column: 1/2;
+        margin: 0;
+        justify-content: center;
+        display: flex;
+    }
+
+    .navRow2 .flexLeft {
+        opacity: 0;
+        max-width: 0;
+    }
+    
+    .content {
+        grid-template-columns: 87vw;
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .contentWrapper {
+        grid-template-columns: minmax(auto, 80vw);
+        max-width: 100%;
+    }
+
+    .projectsGrid {
+        grid-template-columns: minmax(auto, 500px);
     }
 }
