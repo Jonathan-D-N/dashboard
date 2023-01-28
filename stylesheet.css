@@ -27,11 +27,46 @@ body, html {
     grid-template-rows: minmax(auto, auto) minmax(auto, auto);
 }
 
-.sidebar {
+/**********
+SIDEBAR
+**********/
+aside {
     grid-row: 1/4;
     background-color: var(--main-blue);
+    padding-left: 1rem;
 }
 
+.logo {
+    color: var(--main-white);
+    display: flex;
+    align-items: center;
+}
+
+.logo > svg {
+    fill: var(--main-white);
+}
+
+nav > a {
+    text-decoration: none;
+    color: var(--main-white);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+}
+
+a > svg {
+    fill: var(--main-white);
+    margin-right: 1rem;
+}
+
+[title~="Settings"] {
+    margin-top: 5rem;
+}
+
+/************
+TOP NAVBAR
+************/
 .navbar {
     grid-row: 1/2;
     max-width: 1266px;
@@ -90,9 +125,10 @@ body, html {
     align-items: center;
 }
 
-.navRow2 .flexLeft .orange {
-    height: 3.5rem;
-    width: 3.5rem;
+.flexLeft .profilePicture > img {
+    scale: 120%;
+    left: 10px;
+    bottom: 14px;
 }
 
 .navRow2 .flexLeft .heroText {
@@ -214,6 +250,7 @@ for SVGs
     justify-content: space-between;
     flex: 2;
 }
+
 /*************
 RIGHT SIDE CARDS
 *************/
@@ -317,34 +354,30 @@ Right bottom card
 /***
 Colored profile picture circles
 ***/
-.skyblue {
-    align-self: center;
-    background-color: skyblue;
-    height: 3rem;
-    width: 3rem;
-    border-radius: 50%;
+
+.p1 {
+    display: flex;
+    align-items: center;
 }
 
-.orange {
-    align-self: center;
-    background-color: orange;
-    height: 3rem;
-    width: 3rem;
-    border-radius: 50%;
+.p1Picture {
+    position: absolute;
+    transform: scaleX(-1);
 }
 
-.gray {
-    align-self: center;
-    background-color: gray;
-    height: 3rem;
-    width: 3rem;
-    border-radius: 50%;
+.p2 {
+    display: flex;
+    align-items: center;
 }
 
-.pink {
-    align-self: center;
-    background-color: pink;
-    height: 3rem;
-    width: 3rem;
-    border-radius: 50%;
+.profilePicture {
+    position: relative;
+    margin-left: 5px;
+}
+
+.profilePicture > img {
+    position: absolute;
+    left: 5px;
+    right: 0px;
+    bottom: 9px;
 }
