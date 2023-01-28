@@ -20,10 +20,7 @@ body, html {
     overflow-x: hidden;
     overflow-y: hidden;
     display: grid;
-    /* grid-template-columns: 1fr 4fr; */
-    /* grid-template-columns: minmax(400px, 850px) minmax(200px, 400px); */
     grid-template-columns: minmax(auto, 250px) minmax(auto, auto);
-    /* grid-template-rows: 1fr 8fr; */
     grid-template-rows: minmax(auto, auto) minmax(auto, auto);
 }
 
@@ -380,4 +377,56 @@ Colored profile picture circles
     left: 5px;
     right: 0px;
     bottom: 9px;
+}
+
+/***********************
+MEDIA QUERIES
+***********************/
+@media (min-width: 901px) {
+    .mediaYourProjects, .mediaAnnouncements {
+        opacity: 0;
+        position: absolute;
+    }
+}
+
+@media (max-width: 901px) {
+    /******
+    Main content section
+    ******/
+    .titles {
+        opacity: 0;
+    }
+
+    .mediaYourProjects, .mediaAnnouncements {
+        display: flex;
+        justify-content: center;
+        opacity: 100;
+        position: relative;
+        margin-bottom: 1rem;
+    }
+
+    .contentWrapper {
+        scale: 105%;
+        grid-template-columns: minmax(200px, 400px);
+        margin: auto;
+    }
+
+    .projectsGrid {
+        grid-column: 1/2;
+        grid-template-columns: minmax(200px, 400px);
+    }
+
+    .announcementsGrid {
+        margin-top: 2rem;
+        grid-column: 1/2;
+        margin-bottom: 2rem;
+    }
+
+    .cardRight {
+        border-top: 7px solid orange;
+    }
+
+    /*******
+    Aside section
+    *******/
 }
